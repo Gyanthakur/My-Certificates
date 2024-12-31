@@ -8,6 +8,9 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 export default function AdminPage() {
+
+
+  const token = localStorage.getItem("admin_token");
   const [form, setForm] = useState({
     name: "",
     description: "",
@@ -17,12 +20,17 @@ export default function AdminPage() {
   const [loading, setLoading] = useState(false); // State to track loading status
   const router = useRouter();
 
-  //   useEffect(() => {
-  //     const token = localStorage.getItem("adminToken");
-  //     if (!token) {
-  //       router.push("/login");
-  //     }
-  //   }, [router]);
+  useEffect(() => {
+   
+
+      if (!token) {
+        router.push("/");
+      }
+      else{
+        router.push("/admin");
+
+      }
+    }, [token]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -49,6 +57,7 @@ export default function AdminPage() {
       if (res.ok) {
         toast.success("Certificate added successfully!");
         setForm({ name: "", description: "", validationLink: "", file: null });
+        router.push("/");
       } else {
         toast.error("Failed to add certificate.");
       }
@@ -67,7 +76,7 @@ export default function AdminPage() {
       reader.onerror = (error) => reject(error);
     });
 
-  return (
+  return token && (
     <div className="container mx-auto">
       <ToastContainer position="top-right" autoClose={3000} />
       <h1 className="text-3xl font-bold text-center my-8">Admin Panel</h1>
