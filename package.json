@@ -19,6 +19,7 @@
     "phosphor-react": "^1.4.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-icons": "^5.4.0",
     "react-toastify": "^11.0.2"
   },
   "devDependencies": {
