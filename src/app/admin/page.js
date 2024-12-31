@@ -18,20 +18,35 @@ export default function AdminPage() {
     file: null,
   });
   const [loading, setLoading] = useState(false); // State to track loading status
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const router = useRouter();
 
-  useEffect(() => {
+  // useEffect(() => {
    
 
+  //     if (!token) {
+  //       router.push("/");
+  //     }
+  //     else{
+  //       router.push("/admin");
+
+  //     }
+  //   }, [token]);
+  useEffect(() => {
+    // Ensure this only runs in the browser
+    if (typeof window !== "undefined") {
+      const token = localStorage.getItem("admin_token");
+
       if (!token) {
+        // Redirect to home page if no token is found
         router.push("/");
+      } else {
+        // Token exists, user is authenticated
+        setIsAuthenticated(true);
       }
-      else{
-        router.push("/admin");
-
-      }
-    }, [token]);
-
+      setLoading(false); // Update loading state
+    }
+  }, [router]);
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true); // Start loading
@@ -67,6 +82,11 @@ export default function AdminPage() {
       setLoading(false); 
     }
   };
+
+
+  if (!isAuthenticated) {
+    return null; // Prevent rendering if not authenticated
+  }
 
   const toBase64 = (file) =>
     new Promise((resolve, reject) => {
