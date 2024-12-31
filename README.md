@@ -59,26 +59,31 @@ Here are some screenshots of the application:
 
 
 
-## Structure
-```
-My-Certificates/ │ ├── app/ │ ├── about/ │ ├── pages/ │ │ ├── admin/ │ │ │ ├── login.js │ │ ├── ap/ │ │ ├── somin/ │ │ ├── certificates/ │ │ │ ├── certificates.js │ │ ├── documents/ │ │ ├── favicon.ico │ │ ├── global.js │ │ ├── layout.js │ │ └── components/ │ │ ├── CertificateCards.js │ │ ├── Footer.js │ │ ├── Navbar.js │ ├── cloudinary/ │ ├── mongodb.js │ └── models/ │ ├── Certificate.js │ ├── .env.local ├── .gitignore ├── eslint.config.js ├── isconfig.json ├── next.config.mjs ├── package-lock.json ├── package.json ├── postcss.config.mjs ├── README.md └── tailwind.config.mjs```
+
 
 ## Installation
 
 To run the project locally, follow the steps below:
 
 1. Clone the repository:
+
    ```
    git clone https://github.com/Gyanthakur/My-Certificates.git
    ```
+
 2. Navigate to the project directory:
+
    ```
    cd My-Certificates
-    ```
+   ```
+    
 3.  Install the dependencies:
+4.  
    ```
     npm install
   ```
+
+
 4.  Set up environment variables:
    ```
     MONGODB_URI=
@@ -88,11 +93,15 @@ To run the project locally, follow the steps below:
     ADMIN_EMAIL=
     ADMIN_PASSWORD=
     JWT_SECRET=
+
   ```
+
 5.  Start the development server:
    ```
     npm run dev
+
   ```
+
 - The app should now be running at ```http://localhost:3000```.
 
 ---
