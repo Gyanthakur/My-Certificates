@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
+  --background: linear-gradient(to right, #cce4ff, #cad3f1, #ecd5f3);;
   --foreground: #171717;
 }
 
@@ -21,12 +21,17 @@ body {
 }
 
 
+
+
+
+
+
 @keyframes borderMoveY {
   0% {
     transform: translateY(0);
   }
   50% {
-    transform: translateY(10px); /* Vertical movement */
+    transform: translateY(10px); 
   }
   100% {
     transform: translateY(0);
@@ -38,7 +43,7 @@ body {
     transform: translateX(0);
   }
   50% {
-    transform: translateX(10px); /* Horizontal movement */
+    transform: translateX(10px); 
   }
   100% {
     transform: translateX(0);
