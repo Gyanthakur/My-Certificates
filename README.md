@@ -78,13 +78,15 @@ To run the project locally, follow the steps below:
    ```
     
 3.  Install the dependencies:
-4.  
+    
    ```
     npm install
   ```
 
 
 4.  Set up environment variables:
+
+   
    ```
     MONGODB_URI=
     CLOUDINARY_CLOUD_NAME=
@@ -97,6 +99,7 @@ To run the project locally, follow the steps below:
   ```
 
 5.  Start the development server:
+  
    ```
     npm run dev
 
