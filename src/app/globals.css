@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 :root {
-  --background: linear-gradient(to right, #cce4ff, #cad3f1, #ecd5f3);;
+  /* --background: linear-gradient(to right, #cce4ff, #cad3f1, #ecd5f3);; */
+  --background: #f5f5f5
   --foreground: #171717;
 }
 
