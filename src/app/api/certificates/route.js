@@ -86,3 +86,30 @@ export async function POST(req) {
 
 
 
+  export async function DELETE(req) {
+    try {
+      const { certificateId } = await req.json();
+      
+      // Connect to MongoDB
+      await connectToDatabase();
+  
+      // Find the certificate in the database
+      const certificate = await Certificate.findById(certificateId);
+      
+      if (!certificate) {
+        return NextResponse.json({ error: "Certificate not found" }, { status: 404 });
+      }
+  
+      // Delete the image from Cloudinary
+      const publicId = certificate.image.split("/").pop().split(".")[0];
+      await cloudinary.uploader.destroy(publicId);
+  
+      // Delete the certificate from MongoDB
+      await Certificate.findByIdAndDelete(certificateId);
+  
+      return NextResponse.json({ message: "Certificate deleted successfully" }, { status: 200 });
+    } catch (error) {
+      return NextResponse.json({ error: "Failed to delete certificate" }, { status: 500 });
+    }
+  }
+  
