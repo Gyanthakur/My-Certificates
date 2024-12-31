@@ -40,7 +40,7 @@ export default function HomePage() {
           <p className="mt-2 text-green-600">Loading certificates...</p>
         </div>
       )}
-      <div className="grid grid-cols-1 m-10 md:grid-cols-2 lg:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 lg:m-4 md:grid-cols-2 lg:grid-cols-3 gap-4">
         {!loading && certificates.length > 0 ? (
           certificates.map((cert) => (
             <CertificateCard key={cert._id} certificate={cert} />

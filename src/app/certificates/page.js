@@ -8,9 +8,9 @@ const CertificatePage = () => {
     <div className="min-h-screen bg-gradient-to-r from-blue-100 via-indigo-100 to-purple-100 py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto text-center">
         <h1 className="text-5xl font-extrabold text-blue-700 mb-6 text-shadow-md">
-          🌟 My Certificates - Gyan Pratap Singh 🌟
+           My Certificates 
         </h1>
-        <p className="mt-4 text-lg text-gray-700 italic">
+        <p className="mt-4 bg-gradient-to-r from-blue-300 via-purple-100 to-pink-300 text-lg text-gray-900 italic">
           Welcome to my certificate page! Here you can explore the certificates I've earned in various technologies and fields. 🚀
         </p>
 
@@ -19,8 +19,8 @@ const CertificatePage = () => {
           <h2 className="text-4xl font-semibold text-indigo-600 underline">
             About Me
           </h2>
-          <div className="bg-white shadow-xl rounded-lg p-6 mt-6 hover:bg-gray-50 transition duration-300 ease-in-out transform hover:scale-105">
-            <p className="text-lg text-gray-800">
+          <div className="bg-gradient-to-r from-blue-300 via-purple-100 to-pink-300 shadow-xl rounded-lg p-6 mt-6 hover:bg-gray-50 transition duration-300 ease-in-out transform hover:scale-105">
+            <p className="text-lg font-medium text-gray-900">
               I am a passionate B.Tech student specializing in Computer Science at Kamla Nehru Institute of Technology, Sultanpur. My journey in the world of technology has been filled with learning, creating, and sharing my knowledge with others. I have a keen interest in front-end development, web applications, and problem-solving. 💻🔧
             </p>
           </div>
@@ -31,8 +31,8 @@ const CertificatePage = () => {
           <h2 className="text-4xl font-semibold text-indigo-600 underline">
             🏅 My Achievements & Certificates 🏅
           </h2>
-          <div className="bg-white shadow-xl rounded-lg p-6 mt-6 hover:bg-gray-50 transition duration-300 ease-in-out transform hover:scale-105">
-            <p className="text-lg text-gray-700">
+          <div className="bg-gradient-to-r from-blue-300 via-purple-100 to-pink-300 shadow-xl rounded-lg p-6 mt-6 hover:bg-gray-50 transition duration-300 ease-in-out transform hover:scale-105">
+            <p className="text-base font-bold text-gray-900">
               Over the years, I've earned certificates in various fields related to programming, web development, and problem-solving. Some of the key highlights include:
             </p>
             <div className="mt-4 space-y-6">
@@ -70,8 +70,8 @@ const CertificatePage = () => {
           <h2 className="text-4xl font-semibold text-indigo-600 underline">
             Why Certificates Matter to Me 📜
           </h2>
-          <div className="bg-white shadow-xl rounded-lg p-6 mt-6 hover:bg-gray-50 transition duration-300 ease-in-out transform hover:scale-105">
-            <p className="text-lg text-gray-700">
+          <div className="bg-gradient-to-r from-blue-300 via-purple-100 to-pink-300 shadow-xl rounded-lg p-6 mt-6 hover:bg-gray-50 transition duration-300 ease-in-out transform hover:scale-105">
+            <p className="text-lg font-medium text-gray-900">
               Certificates have been instrumental in validating my skills and boosting my confidence. Each certificate represents the hard work and dedication I put into learning new concepts and applying them in real-world projects. They serve as a testimony to my passion for continuous learning and improvement. 🌱💪
             </p>
           </div>
