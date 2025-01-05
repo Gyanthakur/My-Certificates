@@ -155,7 +155,7 @@ export default function HomePage() {
         Certificates
       </h1>
 
-      {/* Loading Animation */}
+      {/* Loading Animation  */}
       {loading && (
         <div className="flex flex-col items-center mt-4">
           <div className="flex space-x-2">
